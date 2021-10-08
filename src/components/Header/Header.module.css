@@ -1,0 +1,20 @@
+.logoName {
+    max-height: 20px;
+    margin-left: 10px;
+}
+
+.logo {
+    max-height: 50px;
+}
+
+.logoWrapper {
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+}
+
+header {
+    background-color: lightgray;
+    display: flex;
+    justify-content: space-around;
+}

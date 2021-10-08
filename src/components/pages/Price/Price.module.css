@@ -1,0 +1,33 @@
+.priceWrapper {
+    max-width: 940px;
+    margin: 0 auto;
+}
+.price_list {
+    display: flex;
+    flex-direction: column;
+}
+
+.price_item {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 40px;
+}
+
+.price_item:nth-child(even) {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+.price_item img {
+    max-width: 150px;
+    border-radius: 50%;
+}
+
+.title {
+    display: flex;
+    align-content: center;
+}
+
+.description {
+
+}

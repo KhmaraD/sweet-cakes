@@ -1,0 +1,17 @@
+.contactsWrapper {
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+.map {
+    width: 100%;
+    height: 250px;
+    border: 0;
+}
+
+
+/*.content {*/
+/*    margin: 0;*/
+/*}*/
