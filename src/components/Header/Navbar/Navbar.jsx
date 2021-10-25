@@ -2,7 +2,9 @@ import React from 'react';
 import style from './Navbar.module.css'
 import {NavLink} from "react-router-dom";
 
-const Navbar = ({links, language}) => {
+const Navbar = ({links, language, setLang}) => {
+
+
 
     return (
         <nav className={style.nav}>
@@ -18,8 +20,8 @@ const Navbar = ({links, language}) => {
                     </li>
                 )}
             </ul>
-            <select name="selectLang" id="lang">
-                <option value="eng" selected>ENG</option>
+            <select name="selectLang" id="lang" value={language} onChange={(e) => setLang(e.target.value)}>
+                <option value="eng">ENG</option>
                 <option value="ua">UA</option>
             </select>
         </nav>

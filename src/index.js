@@ -2,10 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import state from './state/state';
+import {Provider} from "react-redux";
+import {store} from "./store/langReducer";
 
 ReactDOM.render(
-    <App state={state}/>,
+    <Provider store={store}>
+        <App />
+    </Provider>,
   document.getElementById('root')
 );
 
