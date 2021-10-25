@@ -1,4 +1,4 @@
-#Sweet-cakes
+# Sweet-cakes
 
 Stack:
 - React
