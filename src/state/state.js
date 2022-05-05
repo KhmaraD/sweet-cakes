@@ -24,4 +24,6 @@ let state = {
     ],
 }
 
+//if LS lang => state.lang=ls.lang
+
 export default state;

@@ -3,8 +3,13 @@ import style from './Navbar.module.css'
 import {NavLink} from "react-router-dom";
 
 const Navbar = ({links, language, setLang}) => {
-
-
+    //
+    // const links = [
+    //     {link: "/main", linkNameEng: "Main", linkNameUa: "Головна"},
+    //     {link: "/price", linkNameEng: "Price", linkNameUa: "Ціни"},
+    //     {link: "/contacts", linkNameEng: "Contacts", linkNameUa: "Контакти"},
+    //     {link: "/order", linkNameEng: "Order", linkNameUa: "Як замовити"},
+    // ]
 
     return (
         <nav className={style.nav}>
@@ -20,7 +25,12 @@ const Navbar = ({links, language, setLang}) => {
                     </li>
                 )}
             </ul>
-            <select name="selectLang" id="lang" value={language} onChange={(e) => setLang(e.target.value)}>
+            <select
+                name="selectLang"
+                id="lang"
+                value={language}
+                onChange={(e) => setLang(e.target.value)}>
+                {/*add Local Storage*/}
                 <option value="eng">ENG</option>
                 <option value="ua">UA</option>
             </select>

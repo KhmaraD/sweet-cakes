@@ -1,7 +1,6 @@
-import state from "../state/state";
+import state from "../../state/state";
 import {createStore} from "redux";
-
-const SET_LANG = "SET_LANG";
+import {SET_LANG} from "../action/action";
 
 const defaultState = state;
 
@@ -13,7 +12,5 @@ const reducer = (state = defaultState, action) => {
             return state;
     }
 }
-
-export const setLangAction = (payload) => ({type: SET_LANG, payload});
 
 export const store = createStore(reducer);
