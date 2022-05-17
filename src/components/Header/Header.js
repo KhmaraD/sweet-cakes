@@ -1,6 +1,6 @@
 import React from 'react';
-import style from './Header.module.css';
-import Navbar from '.././Header/Navbar/Navbar';
+import style from './Header.module.scss';
+import Navbar from './Navbar/Navbar';
 import logo from '../../assets/images/cake.png';
 import logoName from '../../assets/images/logo_name.png';
 

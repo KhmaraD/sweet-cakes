@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './Price.module.css';
+import style from './Price.module.scss';
 import '../../../App.css';
 
 const Price = ({price}) => {
