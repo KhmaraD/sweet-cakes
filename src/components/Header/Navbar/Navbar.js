@@ -1,9 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 import style from './Navbar.module.scss'
 import {NavLink} from "react-router-dom";
 
 const Navbar = ({links, language, setLang}) => {
-    //
+  const [isActive, setIsActive] = useState(false);
+
     // const links = [
     //     {link: "/main", linkNameEng: "Main", linkNameUa: "Головна"},
     //     {link: "/price", linkNameEng: "Price", linkNameUa: "Ціни"},
@@ -12,10 +13,17 @@ const Navbar = ({links, language, setLang}) => {
     // ]
 
     return (
-        <nav className={style.nav}>
+      <div className={style.nav__wrapper}>
+        <div
+          className={isActive ? `${style.nav__icon} ${style.active_icon}` : style.nav__icon}
+          onClick={() => setIsActive(!isActive)}
+        >
+            <span></span>
+        </div>
+        <nav className={isActive ? `${style.nav} ${style.active}` : style.nav}>
             <ul className={style.list}>
                 {links.map(item =>
-                    <li className={style.nav__item} key={item.link}>
+                    <li className={style.nav__item} key={item.link} onClick={() => setIsActive(false)}>
                         <NavLink to={item.link} activeClassName={style.active}>
                             {language === "ua"
                                 ? item.linkNameUa
@@ -35,6 +43,7 @@ const Navbar = ({links, language, setLang}) => {
                 <option value="ua">UA</option>
             </select>
         </nav>
+      </div>
     );
 };
 

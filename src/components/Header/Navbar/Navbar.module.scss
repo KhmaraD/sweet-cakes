@@ -1,43 +1,130 @@
-.nav {
+.nav__wrapper {
+  .nav__icon {
+    display: none;
+  }
+
+  .nav {
     height: 50px;
     display: flex;
     align-items: center;
     padding: 0 15px;
     justify-content: flex-end;
-}
 
-ul {
-    margin-bottom: 0 !important;
-}
+    ul {
+      margin-bottom: 0 !important;
+    }
 
-ul li {
-    list-style-type: none;
-}
+    ul li {
+      list-style-type: none;
+    }
 
-.list {
-    display: flex;
-}
+    .list {
+      display: flex;
 
-.nav__item {
-    margin: 2px;
-}
+      .nav__item {
+        margin: 2px;
+      }
+    }
 
-.nav a {
-    padding: 0 5px;
-    text-decoration: none;
-    color: black;
-    margin: 0 5px;
-    font-size: 18px;
-}
+    a {
+      padding: 0 5px;
+      text-decoration: none;
+      color: black;
+      margin: 0 5px;
+      font-size: 18px;
+    }
 
-.nav a:hover, .nav a.active:hover {
-    color: goldenrod;
-}
+    a:hover, a.active:hover {
+      color: goldenrod;
+    }
 
-.nav a:active, .nav a.active {
-    color: darkgoldenrod;
-}
+    a:active, a.active {
+      color: darkgoldenrod;
+    }
 
-.nav a:focus {
-    outline: none;
+    a:focus {
+      outline: none;
+    }
+  }
+  @media (max-width: 767px) {
+    .nav__icon {
+      z-index: 5;
+      display: block;
+      position: relative;
+      width: 30px;
+      height: 18px;
+      cursor: pointer;
+      top: 20px;
+    }
+    .nav__icon:before,
+    .nav__icon:after,
+    span {
+      left: 0;
+      position: absolute;
+      height: 10%;
+      width: 100%;
+      transition: all 0.3s ease 0s;
+      background-color: goldenrod;
+    }
+    .nav__icon:before,
+    .nav__icon:after {
+      content: "";
+    }
+    .nav__icon:before {
+      top: 0;
+    }
+    .nav__icon:after {
+      bottom: 0;
+    }
+    span {
+      top: 50%;
+      transform: scale(1) translate(0, -50%);
+    }
+    .active_icon {
+      span {
+        transform: scale(0) translate(0, -50%);
+      }
+    }
+    .active_icon:before {
+      top: 50%;
+      transform: rotate(-45deg) translate(0, -50%);
+    }
+    .active_icon:after {
+      bottom: 50%;
+      transform: rotate(45deg) translate(0, 50%);
+    }
+    .nav {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      padding: 100px 30px 30px 30px;
+      transition: all 0.3s ease 0s;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+
+      .list {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 0;
+
+        .nav__item {
+          margin: 5px;
+        }
+      }
+      a {
+        color: #ffffff;
+        font-size: 150%;
+      }
+      select {
+        margin: 4px;
+      }
+    }
+    .active {
+      left: 0;
+    }
+  }
 }

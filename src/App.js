@@ -1,4 +1,4 @@
-// import './App.css';
+import './App.css';
 import AppRouter from "./components/AppRouter";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
@@ -32,9 +32,9 @@ function App() {
   return (
     <div className="App">
       <Header links={links} language={language} setLang={setLang}/>
-        <main>
-          <AppRouter price={priceItems}/>
-        </main>
+      <main>
+        <AppRouter price={priceItems}/>
+      </main>
       <Footer/>
     </div>
   );

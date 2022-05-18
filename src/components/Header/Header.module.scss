@@ -1,20 +1,32 @@
-.logoName {
-    max-height: 20px;
-    margin-left: 10px;
-}
+header {
+  background-color: #fcf0f3;
+  display: flex;
+  justify-content: space-around;
 
-.logo {
-    max-height: 50px;
-}
-
-.logoWrapper {
+  .logoWrapper {
     display: flex;
     align-items: center;
     padding-left: 30px;
+
+    .logoName {
+      max-height: 20px;
+      margin-left: 10px;
+    }
+
+    .logo {
+      max-height: 50px;
+    }
+  }
 }
 
-header {
-    background-color: #fcf0f3;
-    display: flex;
-    justify-content: space-around;
+@media (max-width: 767px) {
+  header {
+    height: 60px;
+    justify-content: space-between;
+    padding: 0 30px;
+
+    .logoWrapper {
+      padding: 0;
+    }
+  }
 }
