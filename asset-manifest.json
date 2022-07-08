@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/sweet-cakes/static/css/main.cd975229.chunk.css",
-    "main.js": "/sweet-cakes/static/js/main.9d1dbe6c.chunk.js",
-    "main.js.map": "/sweet-cakes/static/js/main.9d1dbe6c.chunk.js.map",
+    "main.js": "/sweet-cakes/static/js/main.410e793e.chunk.js",
+    "main.js.map": "/sweet-cakes/static/js/main.410e793e.chunk.js.map",
     "runtime-main.js": "/sweet-cakes/static/js/runtime-main.3ecd1130.js",
     "runtime-main.js.map": "/sweet-cakes/static/js/runtime-main.3ecd1130.js.map",
     "static/css/2.e6c1e8c5.chunk.css": "/sweet-cakes/static/css/2.e6c1e8c5.chunk.css",
-    "static/js/2.abd9926b.chunk.js": "/sweet-cakes/static/js/2.abd9926b.chunk.js",
-    "static/js/2.abd9926b.chunk.js.map": "/sweet-cakes/static/js/2.abd9926b.chunk.js.map",
+    "static/js/2.dca87bd1.chunk.js": "/sweet-cakes/static/js/2.dca87bd1.chunk.js",
+    "static/js/2.dca87bd1.chunk.js.map": "/sweet-cakes/static/js/2.dca87bd1.chunk.js.map",
     "index.html": "/sweet-cakes/index.html",
     "static/css/2.e6c1e8c5.chunk.css.map": "/sweet-cakes/static/css/2.e6c1e8c5.chunk.css.map",
     "static/css/main.cd975229.chunk.css.map": "/sweet-cakes/static/css/main.cd975229.chunk.css.map",
-    "static/js/2.abd9926b.chunk.js.LICENSE.txt": "/sweet-cakes/static/js/2.abd9926b.chunk.js.LICENSE.txt",
+    "static/js/2.dca87bd1.chunk.js.LICENSE.txt": "/sweet-cakes/static/js/2.dca87bd1.chunk.js.LICENSE.txt",
     "static/media/cake.47a55baf.png": "/sweet-cakes/static/media/cake.47a55baf.png",
     "static/media/choco_cherry.65a0ba69.jpg": "/sweet-cakes/static/media/choco_cherry.65a0ba69.jpg",
     "static/media/img.7fe62c2f.png": "/sweet-cakes/static/media/img.7fe62c2f.png",
@@ -22,8 +22,8 @@
   "entrypoints": [
     "static/js/runtime-main.3ecd1130.js",
     "static/css/2.e6c1e8c5.chunk.css",
-    "static/js/2.abd9926b.chunk.js",
+    "static/js/2.dca87bd1.chunk.js",
     "static/css/main.cd975229.chunk.css",
-    "static/js/main.9d1dbe6c.chunk.js"
+    "static/js/main.410e793e.chunk.js"
   ]
 }
