@@ -4,6 +4,8 @@ import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import {useDispatch, useSelector} from "react-redux";
 import {setLangAction} from "./store/action/action";
+import {useEffect} from "react";
+import {TestInsta} from "./api/api";
 // import {useEffect, useState} from "react";
 // import {priceAPI} from "./api/api";
 
@@ -23,6 +25,21 @@ function App() {
   //     priceAPI.getPriceItems(setPriceItems);
   //
   // }, []);
+
+
+
+  const getInfo = async () => {
+    try {
+      const response = await TestInsta()
+      console.log("resp", response);
+    } catch (err) {
+      console.log("error=====", err)
+    }
+  }
+
+  useEffect(() => {
+    getInfo()
+  }, [])
 
   const setLang = (lang) => {
     dispatch(setLangAction(lang));

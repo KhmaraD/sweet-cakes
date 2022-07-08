@@ -1,6 +1,6 @@
 .contactsWrapper {
-    /*display: flex;*/
-    /*flex-direction: column;*/
+    //display: flex;
+    //flex-direction: column;
     max-width: 940px;
     margin: 0 auto;
 }
@@ -9,6 +9,8 @@
     width: 100%;
     height: 250px;
     border: 0;
+    @media (max-width: 767px) {
+    }
 }
 
 
