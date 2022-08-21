@@ -9,11 +9,11 @@ import {BrowserRouter, HashRouter} from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 
 ReactDOM.render(
-  <HashRouter>
+  <BrowserRouter>
     <Provider store={store}>
       <App/>
     </Provider>
-  </HashRouter>,
+  </BrowserRouter>,
   document.getElementById('root')
 );
 

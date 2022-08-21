@@ -5,6 +5,7 @@ import snickers from "../assets/images/snickers.jpg";
 
 let state = {
     language: 'ua',
+    owner: {nameUA: "Олена Хмара", nameEng: "Olena Khmara"},
     links: [
         {link: "/main", linkNameEng: "Main", linkNameUa: "Головна"},
         {link: "/price", linkNameEng: "Price", linkNameUa: "Ціни"},

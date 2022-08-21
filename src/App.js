@@ -4,8 +4,8 @@ import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import {useDispatch, useSelector} from "react-redux";
 import {setLangAction} from "./store/action/action";
-import {useEffect} from "react";
-import {TestInsta} from "./api/api";
+import {useEffect, useState} from "react";
+import {TestPhoto} from "./api/api";
 // import {useEffect, useState} from "react";
 // import {priceAPI} from "./api/api";
 
@@ -18,6 +18,7 @@ function App() {
   const links = useSelector(state => state.links);
   // const [priceItems, setPriceItems] = useState([]);
   const priceItems = useSelector(state => state.priceItem);
+  const [img, setImg] = useState("");
 
   // useEffect( () => {
   //     priceAPI.getLanguage(setLanguage);
@@ -27,19 +28,24 @@ function App() {
   // }, []);
 
 
-
-  const getInfo = async () => {
-    try {
-      const response = await TestInsta()
-      console.log("resp", response);
-    } catch (err) {
-      console.log("error=====", err)
-    }
-  }
-
-  useEffect(() => {
-    getInfo()
-  }, [])
+  // тестовий запит інстаграм
+  //
+  // const getInfo = async () => {
+  //   try {
+  //     // const response = await TestInsta()
+  //     // const response = await TestData()
+  //     const response = await TestPhoto()
+  //     console.log("resp", response.data.data[0].media_url);
+  //     setImg(response.data.data[0].media_url)
+  //   } catch (err) {
+  //     console.log("error=====", err)
+  //   }
+  // }
+  //
+  // useEffect(() => {
+  //   getInfo()
+  //
+  // }, [])
 
   const setLang = (lang) => {
     dispatch(setLangAction(lang));
@@ -50,7 +56,7 @@ function App() {
     <div className="App">
       <Header links={links} language={language} setLang={setLang}/>
       <main>
-        <AppRouter price={priceItems}/>
+        <AppRouter price={priceItems} img={img}/>
       </main>
       <Footer/>
     </div>

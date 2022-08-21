@@ -1,7 +1,8 @@
 import * as axios from 'axios';
 
-const token = "IGQVJYWTlBc3ZAtZAjkyQUswS0RURFBrd3R0T255QnZAlVzVmbkFDbWRfaE5FQ2dUbHZAxVkpmOEJ4ek9vekZAjQmtUaW15M0l1c2wwclR4M2ZARMEFLdGRxQ1NHRzU1ZAkZAIc2lKMWJ5ZA0lhUTJRQjN6cVNvWgZDZD";
-const user_id = 106935262083230;
+const user_id = process.env.REACT_APP_INSTA_USER_ID;
+const token = process.env.REACT_APP_INSTA_TOKEN;
+
 // const instance = axios.create({
 //     withCredentials: true,
 //     baseURL: 'http://localhost:3004/',
@@ -27,8 +28,22 @@ const user_id = 106935262083230;
 //             })
 //     },
 // }
+
+export const requestInstaMe = () => {
+  //запит за user_id
+  const requestBody = {};
+
+  return axios.get(`https://graph.instagram.com/me?fields=id,username&access_token=${token}`);
+};
+
 export const TestInsta = () => {
   const requestBody = {};
 
   return axios.get(`https://graph.instagram.com/${user_id}?fields=id,username&access_token=${token}`);
+};
+
+export const TestPhoto = () => {
+  const requestBody = {};
+  const dataFields = "id,media_type,media_url";
+  return axios.get(`https://graph.instagram.com/me/media?fields=${dataFields}&access_token=${token}`);
 };

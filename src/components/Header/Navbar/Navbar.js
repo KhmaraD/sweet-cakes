@@ -37,7 +37,10 @@ const Navbar = ({links, language, setLang}) => {
                 name="selectLang"
                 id="lang"
                 value={language}
-                onChange={(e) => setLang(e.target.value)}>
+                onChange={(e) => {
+                  setLang(e.target.value);
+                  setIsActive(!isActive);
+                }}>
                 {/*add Local Storage*/}
                 <option value="eng">ENG</option>
                 <option value="ua">UA</option>

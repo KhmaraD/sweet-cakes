@@ -5,10 +5,10 @@ import MainPage from "./pages/MainPage/MainPage";
 import Contacts from "./pages/Contacts/Contacts";
 import Order from "./pages/Order/Order";
 
-const AppRouter = ({price}) => {
+const AppRouter = ({price, img}) => {
     return (
         <Switch>
-            <Route path="/main" component={MainPage} />
+            <Route path="/main" render={() => <MainPage img={img}/>} />
             <Route path="/price" render={ () => <Price price={price}/>} />
             <Route path="/contacts" component={Contacts} />
             <Route path="/order" component={Order} />
